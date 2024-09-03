@@ -173,7 +173,11 @@ export class AptimusFlow {
       throw new Error("Missing JWT data");
     }
 
-    const aptosConfig = new AptosConfig({ network: Network.TESTNET });
+    const aptosConfig = new AptosConfig({ 
+      network: Network.TESTNET,
+      fullnode: 'https://faucet.testnet.suzuka.movementlabs.xyz/v1',
+      faucet: 'https://faucet.testnet.suzuka.movementlabs.xyz/',
+    });
     const aptos = new Aptos(aptosConfig);
 
     const ephemeralKeyPair = EphemeralKeyPair.fromBytes(

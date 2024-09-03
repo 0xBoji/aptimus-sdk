@@ -37,7 +37,11 @@ export const LoginPage = () => {
     if (!address) {
       throw new Error("Sender address is undefined");
     }
-    const aptosConfig = new AptosConfig({ network: Network.TESTNET });
+    const aptosConfig = new AptosConfig({ 
+      network: Network.TESTNET,
+      fullnode: 'https://faucet.testnet.suzuka.movementlabs.xyz/v1',
+      faucet: 'https://faucet.testnet.suzuka.movementlabs.xyz/',
+    });
     const aptos = new Aptos(aptosConfig);
 
     const bobAccountAddress =
@@ -66,7 +70,11 @@ export const LoginPage = () => {
     if (!address) {
       throw new Error("Sender address is undefined");
     }
-    const aptosConfig = new AptosConfig({ network: Network.TESTNET });
+    const aptosConfig = new AptosConfig({ 
+      network: Network.TESTNET,
+      fullnode: 'https://faucet.testnet.suzuka.movementlabs.xyz/v1',
+      faucet: 'https://faucet.testnet.suzuka.movementlabs.xyz/',
+    });
     const aptos = new Aptos(aptosConfig);
 
     const bobAccountAddress =
@@ -103,7 +111,7 @@ export const LoginPage = () => {
     });
 
     console.log(
-      `Transaction: https://explorer.aptoslabs.com/txn/${executedTransaction.hash}?network=${Network.TESTNET}`
+      `Transaction: https://explorer.movementlabs.xyz/${executedTransaction.hash}?network=${Network.TESTNET}`
     );
   };
 
