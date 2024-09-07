@@ -1,5 +1,5 @@
 {
-  "name": "aptimus",
+  "name": "aptimus-movement",
   "version": "0.0.1",
   "description": "TODO: Description",
   "main": "./dist/cjs/index.js",
@@ -20,7 +20,7 @@
     "build": "tsc --build tsconfig.build.json",
     "demo": "vite ./demo"
   },
-  "author": "",
+  "author": "Weminal-Labs",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.10",
